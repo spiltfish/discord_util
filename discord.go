@@ -14,7 +14,7 @@ type DiscordInfo struct {
 	BotId string
 }
 
-func Read_config()(di DiscordInfo, location string){
+func Read_config(location string)(di DiscordInfo){
 	filename, _ := filepath.Abs(location)
 	yamlFile, err := ioutil.ReadFile(filename)
 	if err != nil {
